@@ -258,7 +258,7 @@ class BlackJackGame{
 public:
     BlackJackGame();
     ~BlackJackGame();
-    bool play(string name);
+    int play(string name);
 protected:
     Deck m_deck;
     ComputerPlayer m_casino;
@@ -271,7 +271,7 @@ BlackJackGame::BlackJackGame(){
 }
 BlackJackGame::~BlackJackGame(){}
 
-bool BlackJackGame::play(string name){
+int BlackJackGame::play(string name){
     int win = 0;
     // reset both players so their hands are empty
     this->joe.reset();
